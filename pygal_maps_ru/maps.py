@@ -115,6 +115,94 @@ REGIONS = {
     'MOW': 'Москва',
 }
 
+REGIONS_EN = {
+    'IRK': 'Irkutsk Region',
+    'TOM': 'Tomsk Region',
+    'KHM': 'Khanty-Mansi Autonomous Area – Yugra',
+    'PER': 'Perm Territory',
+    'TVE': 'Tver Region',
+    'SMO': 'Smolensk Region',
+    'VOR': 'Voronezh Region',
+    'VGG': 'Volgograd Region',
+    'SAR': 'Saratov Region',
+    'ORE': 'Orenburg Region',
+    'KYA': 'Krasnoyarsk Territory',
+    'SA': 'Republic of Sakha (Yakutia)',
+    'MAG': 'Magadan Region',
+    'KAM': 'Kamchatka Territory',
+    'PRI': 'Primorye Territory',
+    'ZAB': 'Trans-Baikal Territory',
+    'BEL': 'Belgorod Region',
+    'KLU': 'Kaluga Region',
+    'MOS': 'Moscow Region',
+    'VLA': 'Vladimir Region',
+    'NIZ': 'Nizhny Novgorod Region',
+    'CU': 'Chuvash Republic',
+    'ME': 'Republic of Mari El',
+    'TA': 'Republic of Tatarstan',
+    'SAM': 'Samara Region',
+    'ROS': 'Rostov Region',
+    'KDA': 'Krasnodar Territory',
+    'KC': '	Karachayevo-Circassian Republic',
+    'KB': 'Kabardino-Balkarian Republic',
+    'STA': 'Stavropol Territory',
+    'DA': 'Republic of Daghestan',
+    'ALT': 'Altai Territory',
+    'NVS': 'Novosibirsk Region',
+    'KEM': 'Kemerovo Region',
+    'KK': 'Republic of Khakassia',
+    'BU': 'Republic of Buryatia',
+    'AMU': 'Amur Region',
+    'SAK': 'Sakhalin Region',
+    'TY': 'Republic of Tuva',
+    'YEV': 'Jewish Autonomous Region',
+    'CHU': 'Chukotka Autonomous Area',
+    'YAN': 'Yamal-Nenets Autonomous Area',
+    'ARK': 'Arkhangelsk Region',
+    'PSK': 'Pskov Region',
+    'KOS': 'Kostroma Region',
+    'VLG': 'Vologda Region',
+    'LEN': 'Leningrad Region',
+    'MUR': 'Murmansk Regionь',
+    'TAM': 'Tambov Region',
+    'PNZ': 'Penza Region',
+    'KIR': 'Kirov Region',
+    'KO': 'Komi Republic',
+    'SEV': 'Sevastopol',
+    'CR': 'Republic of Crimea',
+    'AD': 'Republic of Adygeya',
+    'BA': 'Republic of Bashkortostan',
+    'AL': 'Republic of Altai',
+    'IN': 'Republic of Ingushetia',
+    'KL': 'Republic of Kalmykia',
+    'KR': 'Republic of Karelia',
+    'MO': 'Republic of Mordovia',
+    'SE': 'Republic of North Ossetia – Alania',
+    'UD': 'Udmurtian Republic',
+    'CE': 'Chechen Republic',
+    'KHA': 'Khabarovsk Territory',
+    'AST': 'Astrakhan Region',
+    'BRY': 'Bryansk Region',
+    'IVA': 'Ivanovo Region',
+    'KGD': 'Kaliningrad Region',
+    'KGN': 'Kurgan Region',
+    'KRS': 'Kursk Region',
+    'LIP': 'Lipetsk Region',
+    'NGR': 'Novgorod Region',
+    'OMS': 'Omsk Region',
+    'ORL': 'Orel Region',
+    'RYA': 'Ryazan Region',
+    'SVE': 'Sverdlovsk Region',
+    'TUL': 'Tula Region',
+    'TYU': 'Tyumen Region',
+    'ULY': 'Ulyanovsk Region',
+    'CHE': 'Chelyabinsk Region',
+    'YAR': 'Yaroslavl Region',
+    'NEN': 'Nenets Autonomous Area',
+    'SPE': 'St. Petersburg',
+    'MOW': 'Moscow',
+}
+
 with open(os.path.join(
         os.path.dirname(__file__),
         'russia.svg')) as file:
@@ -125,6 +213,14 @@ class Regions(BaseMap):
     """Russia graph"""
     x_labels = list(REGIONS.keys())
     area_names = REGIONS
+    area_prefix = 'RU-'
+    svg_map = RUSSIA_MAP
+    kind = 'region'
+
+class Regions_en(BaseMap):
+    """Russia graph english"""
+    x_labels = list(REGIONS_EN.keys())
+    area_names = REGIONS_EN
     area_prefix = 'RU-'
     svg_map = RUSSIA_MAP
     kind = 'region'

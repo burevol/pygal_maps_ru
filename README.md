@@ -23,6 +23,8 @@ map.render_to_file('test.svg')
 
 ~~~~
 
+More instruction on [https://github.com/burevol/pygal_maps_ru/wiki](https://github.com/burevol/pygal_maps_ru/wiki)
+
 ## Requirements
 
 * [Pygal](https://github.com/Kozea/pygal) 
