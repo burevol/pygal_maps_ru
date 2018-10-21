@@ -107,3 +107,7 @@ venv.bak/
 russia_population.svg
 .idea/*
 /russia_population_districts.svg
+/test_russia_map_districts.svg
+/test_russia_map_districts_en.svg
+/test_russia_map_regions.svg
+/test_russia_map_regions_en.svg
