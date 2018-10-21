@@ -6,6 +6,12 @@ Russian maps for Pygal
 [![GitHub last commit](https://img.shields.io/github/last-commit/burevol/pygal_maps_ru.svg)](https://github.com/burevol/pygal_maps_ru)
 [![PyPI - Wheel](https://img.shields.io/pypi/wheel/pygal-maps-ru.svg)](https://pypi.org/project/pygal-maps-ru/)
 
+## Installation
+
+~~~
+pip install  pygal-maps-ru 
+~~~
+
 ## Usage
 
 ~~~~
