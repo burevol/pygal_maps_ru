@@ -5,7 +5,7 @@ Russian maps for Pygal
 ## Usage
 
 ~~~~
-from pygal.maps.ru import Regions, Departments
+from pygal.maps.ru import Regions
 
 map = Regions()
 map.add('Data', {'11': 2, '22': 5})
