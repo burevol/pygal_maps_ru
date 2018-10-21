@@ -19,7 +19,7 @@
 Russia chart
 """
 
-# TODO Add english localization
+# TODO Add federal district map
 
 # TODO Add tests
 
