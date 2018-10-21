@@ -106,3 +106,4 @@ venv.bak/
 .mypy_cache/
 russia_population.svg
 .idea/*
+/russia_population_districts.svg

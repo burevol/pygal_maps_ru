@@ -25,7 +25,31 @@ Russia chart
 
 from __future__ import division
 from pygal.graph.map import BaseMap
+from pygal.util import cached_property
 import os
+
+DISTRICTS = {
+    '01': "ЦФО",
+    '02': "СЗФО",
+    '03': "ЮФО",
+    '04': "СКФО",
+    '05': "ПФО",
+    '06': "УрФО",
+    '07': "СФО",
+    '08': "ДФО",
+}
+
+DISTRICTS_EN = {
+    '01': "Central Federal District",
+    '02': "Northwestern Federal District",
+    '03': "Southern Federal District",
+    '04': "North Caucasian Federal District",
+    '05': "Volga Federal District",
+    '06': "Ural Federal District",
+    '07': "Siberian Federal District",
+    '08': "Far Eastern Federal District",
+}
+
 
 REGIONS = {
     'IRK': 'Иркутская область',
@@ -208,6 +232,42 @@ with open(os.path.join(
         'russia.svg')) as file:
     RUSSIA_MAP = file.read()
 
+with open(os.path.join(
+        os.path.dirname(__file__),
+        'russia_d.svg')) as file:
+    RUSSIA_MAP_DISTRICTS = file.read()
+
+class District(BaseMap):
+    """Russia graph districts"""
+    x_labels = list(DISTRICTS.keys())
+    area_names = DISTRICTS
+    area_prefix = 'd'
+    svg_map = RUSSIA_MAP_DISTRICTS
+    kind = 'district'
+
+class District_en(BaseMap):
+    """Russia graph districts en_EN"""
+    x_labels = list(DISTRICTS_EN.keys())
+    area_names = DISTRICTS_EN
+    area_prefix = 'd'
+    svg_map = RUSSIA_MAP_DISTRICTS
+    kind = 'district'
+
+    # @cached_property
+    # def districts(self):
+    #     return [val[0]
+    #             for serie in self.all_series
+    #             for val in serie.values
+    #             if val[0] is not None]
+    #
+    # @cached_property
+    # def _values(self):
+    #     """Getter for series values (flattened)"""
+    #     return [val[1]
+    #             for serie in self.series
+    #             for val in serie.values
+    #             if val[1] is not None]
+
 
 class Regions(BaseMap):
     """Russia graph"""
@@ -217,6 +277,21 @@ class Regions(BaseMap):
     svg_map = RUSSIA_MAP
     kind = 'region'
 
+    @cached_property
+    def regions(self):
+        return [val[0]
+                for serie in self.all_series
+                for val in serie.values
+                if val[0] is not None]
+
+    @cached_property
+    def _values(self):
+        """Getter for series values (flattened)"""
+        return [val[1]
+                for serie in self.series
+                for val in serie.values
+                if val[1] is not None]
+
 class Regions_en(BaseMap):
     """Russia graph english"""
     x_labels = list(REGIONS_EN.keys())
@@ -224,4 +299,19 @@ class Regions_en(BaseMap):
     area_prefix = 'RU-'
     svg_map = RUSSIA_MAP
     kind = 'region'
+
+    @cached_property
+    def regions(self):
+        return [val[0]
+                for serie in self.all_series
+                for val in serie.values
+                if val[0] is not None]
+
+    @cached_property
+    def _values(self):
+        """Getter for series values (flattened)"""
+        return [val[1]
+                for serie in self.series
+                for val in serie.values
+                if val[1] is not None]
 
