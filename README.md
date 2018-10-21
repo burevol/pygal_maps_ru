@@ -5,11 +5,12 @@ Russian maps for Pygal
 ## Usage
 
 ~~~~
-from pygal.maps.ru import Regions
+import pygal.maps.ru
 
-map = Regions()
-map.add('Data', {'11': 2, '22': 5})
-map.render()
+map = pygal.maps.ru.Regions()
+map.add('Data', {'KHM': 2, 'KYA': 5})
+map.render_to_file('test.svg')
+
 ~~~~
 
 ## Requirements
