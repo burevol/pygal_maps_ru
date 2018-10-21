@@ -2,7 +2,7 @@
 
 Russian maps for Pygal
 
-##Usage
+## Usage
 
 ~~~~
 from pygal.maps.ru import Regions, Departments
@@ -12,10 +12,10 @@ map.add('Data', {'11': 2, '22': 5})
 map.render()
 ~~~~
 
-##Requirements
+## Requirements
 
 * [Pygal](https://github.com/Kozea/pygal) 
 
-##Author
+## Author
 [burevol](https://github.com/burevol)   
 SVG map by [SmartTeleMax](https://github.com/SmartTeleMax)

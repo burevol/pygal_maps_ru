@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-# This file is part of pygal
-#
+
 # A python svg graph plotting library
 # Copyright © 2012-2014 Kozea
 #
@@ -19,6 +18,10 @@
 """
 Russia chart
 """
+
+# TODO Add english localization
+
+# TODO Add tests
 
 from __future__ import division
 from pygal.graph.map import BaseMap
@@ -126,17 +129,3 @@ class Regions(BaseMap):
     svg_map = RUSSIA_MAP
     kind = 'region'
 
-    # @cached_property
-    # def countries(self):
-    #     return [val[0]
-    #             for serie in self.all_series
-    #             for val in serie.values
-    #             if val[0] is not None]
-    #
-    # @cached_property
-    # def _values(self):
-    #     """Getter for series values (flattened)"""
-    #     return [val[1]
-    #             for serie in self.series
-    #             for val in serie.values
-    #             if val[1] is not None]
