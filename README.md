@@ -2,7 +2,6 @@
 
 Russian maps for Pygal
 
-
 ##Usage
 
 ~~~~
