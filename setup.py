@@ -1,14 +1,19 @@
 from setuptools import setup, find_packages
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
     name='pygal_maps_ru',
-    version='1.0.0',
+    version='1.0.1.1',
     packages=find_packages(),
     url='https://github.com/burevol/pygal_maps_ru',
     license='GNU LGPL v3+',
     author='Burevol',
     author_email='alexum2013@yandex.ru',
     description='Russian maps for Pygal',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     platforms="Any",
     provides=['pygal_maps_ru'],
     keywords=[
