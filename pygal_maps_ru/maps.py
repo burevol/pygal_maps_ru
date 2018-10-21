@@ -19,14 +19,11 @@
 Russia chart
 """
 
-# TODO Add federal district map
-
-# TODO Add tests
-
 from __future__ import division
-from pygal.graph.map import BaseMap
-from pygal.util import cached_property
+
 import os
+
+from pygal.graph.map import BaseMap
 
 DISTRICTS = {
     '01': "ЦФО",
@@ -49,7 +46,6 @@ DISTRICTS_EN = {
     '07': "Siberian Federal District",
     '08': "Far Eastern Federal District",
 }
-
 
 REGIONS = {
     'IRK': 'Иркутская область',
@@ -237,6 +233,7 @@ with open(os.path.join(
         'russia_d.svg')) as file:
     RUSSIA_MAP_DISTRICTS = file.read()
 
+
 class District(BaseMap):
     """Russia graph districts"""
     x_labels = list(DISTRICTS.keys())
@@ -245,6 +242,7 @@ class District(BaseMap):
     svg_map = RUSSIA_MAP_DISTRICTS
     kind = 'district'
 
+
 class District_en(BaseMap):
     """Russia graph districts en_EN"""
     x_labels = list(DISTRICTS_EN.keys())
@@ -252,21 +250,6 @@ class District_en(BaseMap):
     area_prefix = 'd'
     svg_map = RUSSIA_MAP_DISTRICTS
     kind = 'district'
-
-    # @cached_property
-    # def districts(self):
-    #     return [val[0]
-    #             for serie in self.all_series
-    #             for val in serie.values
-    #             if val[0] is not None]
-    #
-    # @cached_property
-    # def _values(self):
-    #     """Getter for series values (flattened)"""
-    #     return [val[1]
-    #             for serie in self.series
-    #             for val in serie.values
-    #             if val[1] is not None]
 
 
 class Regions(BaseMap):
@@ -277,20 +260,6 @@ class Regions(BaseMap):
     svg_map = RUSSIA_MAP
     kind = 'region'
 
-    @cached_property
-    def regions(self):
-        return [val[0]
-                for serie in self.all_series
-                for val in serie.values
-                if val[0] is not None]
-
-    @cached_property
-    def _values(self):
-        """Getter for series values (flattened)"""
-        return [val[1]
-                for serie in self.series
-                for val in serie.values
-                if val[1] is not None]
 
 class Regions_en(BaseMap):
     """Russia graph english"""
@@ -299,19 +268,3 @@ class Regions_en(BaseMap):
     area_prefix = 'RU-'
     svg_map = RUSSIA_MAP
     kind = 'region'
-
-    @cached_property
-    def regions(self):
-        return [val[0]
-                for serie in self.all_series
-                for val in serie.values
-                if val[0] is not None]
-
-    @cached_property
-    def _values(self):
-        """Getter for series values (flattened)"""
-        return [val[1]
-                for serie in self.series
-                for val in serie.values
-                if val[1] is not None]
-

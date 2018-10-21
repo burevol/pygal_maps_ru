@@ -31,4 +31,5 @@ More instruction on [https://github.com/burevol/pygal_maps_ru/wiki](https://gith
 
 ## Author
 [burevol](https://github.com/burevol)   
-SVG map by [SmartTeleMax](https://github.com/SmartTeleMax)
+SVG map by [SmartTeleMax](https://github.com/SmartTeleMax)  
+SVG district map by [kalyabin](https://github.com/kalyabin)
