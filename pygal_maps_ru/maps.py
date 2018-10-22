@@ -183,7 +183,7 @@ REGIONS_EN = {
     'KOS': 'Kostroma Region',
     'VLG': 'Vologda Region',
     'LEN': 'Leningrad Region',
-    'MUR': 'Murmansk Regionь',
+    'MUR': 'Murmansk Region',
     'TAM': 'Tambov Region',
     'PNZ': 'Penza Region',
     'KIR': 'Kirov Region',
